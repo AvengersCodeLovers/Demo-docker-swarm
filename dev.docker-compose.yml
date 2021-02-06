@@ -1,0 +1,25 @@
+version: '3'
+services:
+
+  # The Application
+  app:
+    container_name: php-app
+    build:
+      context: ./
+      dockerfile: dev.app.dockerfile
+    working_dir: /var/www
+    volumes:
+      - ./src:/var/www/
+    env_file: ./src/.env
+
+  # The Web Server
+  web:
+    container_name: php-web
+    build:
+      context: ./
+      dockerfile: dev.web.dockerfile
+    working_dir: /var/www
+    volumes:
+      - ./src:/var/www/
+    ports:
+      - 8080:80

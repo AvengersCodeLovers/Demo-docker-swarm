@@ -1,0 +1,28 @@
+version: '3'
+services:
+
+  # The Application
+  app:
+    image: rogteam/php-app
+    working_dir: /var/www
+    environment:
+      - "APP_NAME=Php-app-images"
+    tty: true
+    ports:
+      - "9000:9000"
+    deploy:
+      replicas: 3
+      restart_policy:
+        condition: on-failure 
+
+  # The Web Server
+  web:
+    image: rogteam/php-web
+    ports:
+      - 80:80
+    depends_on:
+      - app
+    deploy:
+      replicas: 3
+      restart_policy:
+        condition: on-failure 
