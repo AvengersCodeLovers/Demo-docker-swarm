@@ -49,5 +49,5 @@ docker stack deploy --compose-file prod.docker-compose.yml nameStack
 ```
 
 # Document 
-Slide seminar: http://sal.vn/seminar-q1-2021
-Ultimate AWS Certified Solutions Architect Associate: https://drive.google.com/file/d/1l2P6nPf9_fQfawmmiY_0tVhd2FUHXn0Z/view?usp=sharing
+- Slide seminar: http://sal.vn/seminar-q1-2021
+- Ultimate AWS Certified Solutions Architect Associate: https://drive.google.com/file/d/1l2P6nPf9_fQfawmmiY_0tVhd2FUHXn0Z/view?usp=sharing
